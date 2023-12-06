@@ -6,7 +6,7 @@
         {
             "label": "ghdlbuild",
             "type": "shell",
-            "command": "./scripts/ghdlBuild.cmd",
+            "command": "./ghdlBuild.cmd",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
