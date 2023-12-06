@@ -1,0 +1,41 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Wed Dec 06 21:17:06 2023
+[*]
+[dumpfile] "C:\Users\loren\OneDrive\Projekte\VHDL\minimalStackMachine\wave.ghw"
+[dumpfile_mtime] "Wed Dec 06 21:16:22 2023"
+[dumpfile_size] 3303
+[savefile] "C:\Users\loren\OneDrive\Projekte\VHDL\minimalStackMachine\sav.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-27.000000 308000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.tb.
+[treeopen] top.tb.s.
+[treeopen] top.tb.s.r_stack.
+[sst_width] 211
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 154
+@28
+top.tb.clk
+top.tb.n_res
+top.tb.s.i_dec
+top.tb.s.i_inc
+@200
+-
+@22
+[color] 2
+#{top.tb.s.r_sp[3:0]} top.tb.s.r_sp[3] top.tb.s.r_sp[2] top.tb.s.r_sp[1] top.tb.s.r_sp[0]
+[color] 2
+#{top.tb.s.o_tos[15:0]} top.tb.s.o_tos[15] top.tb.s.o_tos[14] top.tb.s.o_tos[13] top.tb.s.o_tos[12] top.tb.s.o_tos[11] top.tb.s.o_tos[10] top.tb.s.o_tos[9] top.tb.s.o_tos[8] top.tb.s.o_tos[7] top.tb.s.o_tos[6] top.tb.s.o_tos[5] top.tb.s.o_tos[4] top.tb.s.o_tos[3] top.tb.s.o_tos[2] top.tb.s.o_tos[1] top.tb.s.o_tos[0]
+[color] 2
+#{top.tb.s.o_btos[15:0]} top.tb.s.o_btos[15] top.tb.s.o_btos[14] top.tb.s.o_btos[13] top.tb.s.o_btos[12] top.tb.s.o_btos[11] top.tb.s.o_btos[10] top.tb.s.o_btos[9] top.tb.s.o_btos[8] top.tb.s.o_btos[7] top.tb.s.o_btos[6] top.tb.s.o_btos[5] top.tb.s.o_btos[4] top.tb.s.o_btos[3] top.tb.s.o_btos[2] top.tb.s.o_btos[1] top.tb.s.o_btos[0]
+@200
+-
+@28
+top.tb.s.o_min
+top.tb.s.o_max
+[pattern_trace] 1
+[pattern_trace] 0
