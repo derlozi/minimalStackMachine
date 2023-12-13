@@ -47,6 +47,6 @@ begin
 
     n_res <= '1', '0' after 100 ns, '1' after 7 us;
     n_data <= "0000000011110000", "0000111100001111" after 400 ns;
-    n_inc <= '0', '1' after 100 ns, '0' after 200 ns, '1' after 400 ns, '0' after 4 us;
+    n_inc <= '0', '1' after 100 ns, '0' after 200 ns, '1' after 400 ns, '1' after 4 us;
     n_dec <= '0', '1' after 300 ns, '0' after 400 ns, '1' after 4 us;
 end behaviour;
