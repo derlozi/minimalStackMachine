@@ -1,10 +1,10 @@
 v 4
-file . "./alu.vhdl" "fb8cec9abe5f8d0e193cea37301719b104ff7852" "20231213170143.413":
-  entity alu at 1( 0) + 0 on 173;
-  architecture arch of alu at 15( 372) + 0 on 174;
-file . "./stack.vhdl" "b752fa130ce118845150b1a11319c7286763123c" "20231213170143.380":
-  entity stack at 1( 0) + 0 on 171;
-  architecture behaviour of stack at 17( 482) + 0 on 172;
-file . "./alutb.vhdl" "af6775a5558bb753ca0b83276900f419916e350a" "20231213170143.448":
-  entity tb at 1( 0) + 0 on 175;
-  architecture behaviour of tb at 12( 244) + 0 on 176;
+file . "./alu.vhdl" "fb8cec9abe5f8d0e193cea37301719b104ff7852" "20231214172002.119":
+  entity alu at 1( 0) + 0 on 237;
+  architecture arch of alu at 15( 372) + 0 on 238;
+file . "./stack.vhdl" "af2a12981b722a20acc665c02f39a29545be2c30" "20231214172002.078":
+  entity stack at 1( 0) + 0 on 235;
+  architecture behaviour of stack at 17( 491) + 0 on 236;
+file . "./stacktb.vhdl" "c1a043f02f5bc6d35966645e37eda50232174dfa" "20231214172002.155":
+  entity tb at 1( 0) + 0 on 239;
+  architecture behaviour of tb at 9( 105) + 0 on 240;

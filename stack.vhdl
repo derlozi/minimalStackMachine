@@ -7,7 +7,7 @@ entity stack is
             g_stackSize : integer := 16;
             g_spSize : integer := 4
   );
-  port (    i_inc, i_dec, i_res : in std_logic;
+  port (    i_inc, i_dec1, i_dec2, i_res : in std_logic;
             o_min, o_max : out std_logic;
             o_tos, o_btos : out std_logic_vector(15 downto 0);--top of stack, below top of stack
             i_data : in std_logic_vector(15 downto 0);
@@ -25,11 +25,18 @@ begin
             if(i_res = '1')then
                 r_sp <= (others=>'0');
                 r_stack(0) <= i_data;--load first value immediately after reset
+            elsif(i_dec1 = '1' and i_inc = '1')then--all input combinations handled separately as there are different minimal stack pointer values depending on input combination, e.g. dec2 doesnt make sense with sp = 1, except when inc=1
+                r_stack(to_integer(r_sp)) <= i_data;--not sure if i should lock down all invalid combinations, or just leave them open to programmer resposibility, would surely be faster otherwise?
+            elsif(i_dec2 = '1' and r_sp > 0 and i_inc = '1')then
+                r_sp <= r_sp - 1;
+                r_stack(to_integer(r_sp - 1)) <= i_data;
+            elsif(i_dec1 = '1' and r_sp > 0)then
+                r_sp <= r_sp - 1;
+            elsif(i_dec2 = '1' and r_sp > 1)then
+                r_sp <= r_sp - 2;
             elsif(i_inc = '1' and r_sp < 15)then
                 r_sp <= r_sp + 1;
                 r_stack(to_integer(r_sp + 1)) <= i_data;
-            elsif(i_dec = '1' and r_sp > 0)then
-                r_sp <= r_sp - 1;
             end if;
         end if;
     end process;

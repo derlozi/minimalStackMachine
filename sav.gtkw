@@ -1,39 +1,46 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Wed Dec 13 17:01:56 2023
+[*] Thu Dec 14 17:06:06 2023
 [*]
 [dumpfile] "C:\Users\loren\OneDrive\Projekte\VHDL\minimalStackMachine\wave.ghw"
-[dumpfile_mtime] "Wed Dec 13 17:01:43 2023"
-[dumpfile_size] 3235
+[dumpfile_mtime] "Thu Dec 14 17:05:57 2023"
+[dumpfile_size] 3506
 [savefile] "C:\Users\loren\OneDrive\Projekte\VHDL\minimalStackMachine\sav.gtkw"
 [timestart] 0
 [size] 1473 841
-[pos] -87 -87
-*-28.000000 406000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] -1 -1
+*-28.000000 773000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.tb.
-[treeopen] top.tb.a.
+[treeopen] top.tb.s.
+[treeopen] top.tb.s.r_stack.
 [sst_width] 211
 [signals_width] 158
 [sst_expanded] 1
 [sst_vpaned_height] 239
 @28
-top.tb.a.i_clk
-@22
-#{top.tb.a.i_inst[3:0]} top.tb.a.i_inst[3] top.tb.a.i_inst[2] top.tb.a.i_inst[1] top.tb.a.i_inst[0]
-#{top.tb.a.i_tos[15:0]} top.tb.a.i_tos[15] top.tb.a.i_tos[14] top.tb.a.i_tos[13] top.tb.a.i_tos[12] top.tb.a.i_tos[11] top.tb.a.i_tos[10] top.tb.a.i_tos[9] top.tb.a.i_tos[8] top.tb.a.i_tos[7] top.tb.a.i_tos[6] top.tb.a.i_tos[5] top.tb.a.i_tos[4] top.tb.a.i_tos[3] top.tb.a.i_tos[2] top.tb.a.i_tos[1] top.tb.a.i_tos[0]
-#{top.tb.a.i_btos[15:0]} top.tb.a.i_btos[15] top.tb.a.i_btos[14] top.tb.a.i_btos[13] top.tb.a.i_btos[12] top.tb.a.i_btos[11] top.tb.a.i_btos[10] top.tb.a.i_btos[9] top.tb.a.i_btos[8] top.tb.a.i_btos[7] top.tb.a.i_btos[6] top.tb.a.i_btos[5] top.tb.a.i_btos[4] top.tb.a.i_btos[3] top.tb.a.i_btos[2] top.tb.a.i_btos[1] top.tb.a.i_btos[0]
+top.tb.clk
+top.tb.n_inc
+top.tb.n_dec1
+top.tb.n_dec2
+top.tb.n_res
 @200
 -
+@22
+#{top.tb.s.r_sp[3:0]} top.tb.s.r_sp[3] top.tb.s.r_sp[2] top.tb.s.r_sp[1] top.tb.s.r_sp[0]
+#{top.tb.n_data[15:0]} top.tb.n_data[15] top.tb.n_data[14] top.tb.n_data[13] top.tb.n_data[12] top.tb.n_data[11] top.tb.n_data[10] top.tb.n_data[9] top.tb.n_data[8] top.tb.n_data[7] top.tb.n_data[6] top.tb.n_data[5] top.tb.n_data[4] top.tb.n_data[3] top.tb.n_data[2] top.tb.n_data[1] top.tb.n_data[0]
+#{top.tb.s.o_tos[15:0]} top.tb.s.o_tos[15] top.tb.s.o_tos[14] top.tb.s.o_tos[13] top.tb.s.o_tos[12] top.tb.s.o_tos[11] top.tb.s.o_tos[10] top.tb.s.o_tos[9] top.tb.s.o_tos[8] top.tb.s.o_tos[7] top.tb.s.o_tos[6] top.tb.s.o_tos[5] top.tb.s.o_tos[4] top.tb.s.o_tos[3] top.tb.s.o_tos[2] top.tb.s.o_tos[1] top.tb.s.o_tos[0]
+#{top.tb.s.o_btos[15:0]} top.tb.s.o_btos[15] top.tb.s.o_btos[14] top.tb.s.o_btos[13] top.tb.s.o_btos[12] top.tb.s.o_btos[11] top.tb.s.o_btos[10] top.tb.s.o_btos[9] top.tb.s.o_btos[8] top.tb.s.o_btos[7] top.tb.s.o_btos[6] top.tb.s.o_btos[5] top.tb.s.o_btos[4] top.tb.s.o_btos[3] top.tb.s.o_btos[2] top.tb.s.o_btos[1] top.tb.s.o_btos[0]
+@200
 -
 @22
-#{top.tb.a.r_res[15:0]} top.tb.a.r_res[15] top.tb.a.r_res[14] top.tb.a.r_res[13] top.tb.a.r_res[12] top.tb.a.r_res[11] top.tb.a.r_res[10] top.tb.a.r_res[9] top.tb.a.r_res[8] top.tb.a.r_res[7] top.tb.a.r_res[6] top.tb.a.r_res[5] top.tb.a.r_res[4] top.tb.a.r_res[3] top.tb.a.r_res[2] top.tb.a.r_res[1] top.tb.a.r_res[0]
-@29
-top.tb.a.o_res
-@28
-top.tb.a.o_inc
-top.tb.a.o_dec
-top.tb.a.o_resready
-top.tb.a.o_eqzero
+#{top.tb.s.r_stack[0][15:0]} top.tb.s.r_stack[0][15] top.tb.s.r_stack[0][14] top.tb.s.r_stack[0][13] top.tb.s.r_stack[0][12] top.tb.s.r_stack[0][11] top.tb.s.r_stack[0][10] top.tb.s.r_stack[0][9] top.tb.s.r_stack[0][8] top.tb.s.r_stack[0][7] top.tb.s.r_stack[0][6] top.tb.s.r_stack[0][5] top.tb.s.r_stack[0][4] top.tb.s.r_stack[0][3] top.tb.s.r_stack[0][2] top.tb.s.r_stack[0][1] top.tb.s.r_stack[0][0]
+#{top.tb.s.r_stack[1][15:0]} top.tb.s.r_stack[1][15] top.tb.s.r_stack[1][14] top.tb.s.r_stack[1][13] top.tb.s.r_stack[1][12] top.tb.s.r_stack[1][11] top.tb.s.r_stack[1][10] top.tb.s.r_stack[1][9] top.tb.s.r_stack[1][8] top.tb.s.r_stack[1][7] top.tb.s.r_stack[1][6] top.tb.s.r_stack[1][5] top.tb.s.r_stack[1][4] top.tb.s.r_stack[1][3] top.tb.s.r_stack[1][2] top.tb.s.r_stack[1][1] top.tb.s.r_stack[1][0]
+#{top.tb.s.r_stack[2][15:0]} top.tb.s.r_stack[2][15] top.tb.s.r_stack[2][14] top.tb.s.r_stack[2][13] top.tb.s.r_stack[2][12] top.tb.s.r_stack[2][11] top.tb.s.r_stack[2][10] top.tb.s.r_stack[2][9] top.tb.s.r_stack[2][8] top.tb.s.r_stack[2][7] top.tb.s.r_stack[2][6] top.tb.s.r_stack[2][5] top.tb.s.r_stack[2][4] top.tb.s.r_stack[2][3] top.tb.s.r_stack[2][2] top.tb.s.r_stack[2][1] top.tb.s.r_stack[2][0]
+#{top.tb.s.r_stack[3][15:0]} top.tb.s.r_stack[3][15] top.tb.s.r_stack[3][14] top.tb.s.r_stack[3][13] top.tb.s.r_stack[3][12] top.tb.s.r_stack[3][11] top.tb.s.r_stack[3][10] top.tb.s.r_stack[3][9] top.tb.s.r_stack[3][8] top.tb.s.r_stack[3][7] top.tb.s.r_stack[3][6] top.tb.s.r_stack[3][5] top.tb.s.r_stack[3][4] top.tb.s.r_stack[3][3] top.tb.s.r_stack[3][2] top.tb.s.r_stack[3][1] top.tb.s.r_stack[3][0]
+#{top.tb.s.r_stack[4][15:0]} top.tb.s.r_stack[4][15] top.tb.s.r_stack[4][14] top.tb.s.r_stack[4][13] top.tb.s.r_stack[4][12] top.tb.s.r_stack[4][11] top.tb.s.r_stack[4][10] top.tb.s.r_stack[4][9] top.tb.s.r_stack[4][8] top.tb.s.r_stack[4][7] top.tb.s.r_stack[4][6] top.tb.s.r_stack[4][5] top.tb.s.r_stack[4][4] top.tb.s.r_stack[4][3] top.tb.s.r_stack[4][2] top.tb.s.r_stack[4][1] top.tb.s.r_stack[4][0]
+#{top.tb.s.r_stack[5][15:0]} top.tb.s.r_stack[5][15] top.tb.s.r_stack[5][14] top.tb.s.r_stack[5][13] top.tb.s.r_stack[5][12] top.tb.s.r_stack[5][11] top.tb.s.r_stack[5][10] top.tb.s.r_stack[5][9] top.tb.s.r_stack[5][8] top.tb.s.r_stack[5][7] top.tb.s.r_stack[5][6] top.tb.s.r_stack[5][5] top.tb.s.r_stack[5][4] top.tb.s.r_stack[5][3] top.tb.s.r_stack[5][2] top.tb.s.r_stack[5][1] top.tb.s.r_stack[5][0]
+#{top.tb.s.r_stack[6][15:0]} top.tb.s.r_stack[6][15] top.tb.s.r_stack[6][14] top.tb.s.r_stack[6][13] top.tb.s.r_stack[6][12] top.tb.s.r_stack[6][11] top.tb.s.r_stack[6][10] top.tb.s.r_stack[6][9] top.tb.s.r_stack[6][8] top.tb.s.r_stack[6][7] top.tb.s.r_stack[6][6] top.tb.s.r_stack[6][5] top.tb.s.r_stack[6][4] top.tb.s.r_stack[6][3] top.tb.s.r_stack[6][2] top.tb.s.r_stack[6][1] top.tb.s.r_stack[6][0]
+#{top.tb.s.r_stack[7][15:0]} top.tb.s.r_stack[7][15] top.tb.s.r_stack[7][14] top.tb.s.r_stack[7][13] top.tb.s.r_stack[7][12] top.tb.s.r_stack[7][11] top.tb.s.r_stack[7][10] top.tb.s.r_stack[7][9] top.tb.s.r_stack[7][8] top.tb.s.r_stack[7][7] top.tb.s.r_stack[7][6] top.tb.s.r_stack[7][5] top.tb.s.r_stack[7][4] top.tb.s.r_stack[7][3] top.tb.s.r_stack[7][2] top.tb.s.r_stack[7][1] top.tb.s.r_stack[7][0]
 [pattern_trace] 1
 [pattern_trace] 0
