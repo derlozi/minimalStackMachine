@@ -14,7 +14,7 @@ architecture behaviour of tb is
     component alu is
         port (
           i_clk : in std_logic;
-          o_eqzero, o_resReady, o_inc, o_dec, o_res : out std_logic;
+          o_eqzero, o_resReady, o_inc, o_dec1, o_dec2, o_res : out std_logic;
           i_tos, i_btos, i_dataIn : in std_logic_vector(15 downto 0); 
           i_inst : in std_logic_vector(3 downto 0);
           o_result : out std_logic_vector(15 downto 0)
