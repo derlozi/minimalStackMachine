@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 entity alu is
   port (
     i_clk : in std_logic;
-    o_eqzero, o_resReady, o_inc, o_dec1, o_dec2, o_res : out std_logic;
+    o_eqzero, o_resReady, o_inc, o_dec1, o_dec2, o_resSp : out std_logic;
     i_tos, i_btos, i_dataIn : in std_logic_vector(15 downto 0); 
     i_inst : in std_logic_vector(3 downto 0);
     o_result : out std_logic_vector(15 downto 0)
@@ -33,8 +33,8 @@ begin
     o_dec2 <= '1' when currState = base and i_inst = "0100" else '0';
     o_inc <= '1' when currState = base and (i_inst = "0001" or i_inst = "0100" or i_inst = "0101" or i_inst = "0110" or i_inst = "1000" or i_inst = "1001" 
                     or i_inst = "1011" or i_inst = "1100") else '0';
-    o_res <= '1' when currState = base and (i_inst = "0010") else '0';
-    r_res <=i_dataIn when i_inst = "0001" else
+    o_resSp <= '1' when currState = base and (i_inst = "0010") else '0';
+    r_res <=i_dataIn when (i_inst = "0001" or i_inst = "0010") else
             std_logic_vector(signed(i_tos) + signed(i_btos)) when i_inst = "0100" else
             NOT(i_tos) when i_inst = "0101" else
             std_logic_vector(signed(NOT(i_tos))+1) when i_inst = "0110" else
