@@ -35,6 +35,7 @@ begin
                     or i_inst = "1011" or i_inst = "1100") else '0';
     o_resSp <= '1' when currState = base and (i_inst = "0010") else '0';
     r_res <=i_dataIn when (i_inst = "0001" or i_inst = "0010") else
+            i_tos when i_inst = "0011" else
             std_logic_vector(signed(i_tos) + signed(i_btos)) when i_inst = "0100" else
             NOT(i_tos) when i_inst = "0101" else
             std_logic_vector(signed(NOT(i_tos))+1) when i_inst = "0110" else
