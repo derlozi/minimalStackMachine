@@ -62,7 +62,7 @@ begin
     end process;
 
     n_inst <= x"2", x"1" after 100 ns, x"4" after 300 ns, x"1" after 400 ns, x"6" after 500 ns, 
-              x"4" after 600 ns, x"2" after 700 ns, x"0" after 800 ns, x"1" after 900 ns, x"3" after 1000 ns;
-    n_dataIn <= x"0005", x"0001" after 300 ns, x"0002" after 900 ns;
+              x"4" after 600 ns, x"2" after 700 ns, x"0" after 800 ns, x"1" after 900 ns, x"1" after 1000 ns;
+    n_dataIn <= x"0005", x"0001" after 300 ns, x"0004" after 900 ns;
 
 end behaviour; 
