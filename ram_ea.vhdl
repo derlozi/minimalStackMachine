@@ -14,8 +14,7 @@ entity single_ram is
 		write_i       : in  std_logic;
 		addr_i        : in  std_logic_vector(ADDR_BITWIDTH - 1 downto 0);
 		data_i        : in  std_logic_vector(DATA_BITWIDTH - 1 downto 0);
-		data_o        : out std_logic_vector(DATA_BITWIDTH - 1 downto 0);
-		-- Port B
+		data_o        : out std_logic_vector(DATA_BITWIDTH - 1 downto 0)
 	);
 end single_ram;
  
