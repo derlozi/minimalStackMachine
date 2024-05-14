@@ -6,6 +6,7 @@ entity inst_dec is
     port(
             o_inst,  o_data_ram : out std_logic_vector(3 downto 0);
             o_data_alu, o_addr_ram : out std_logic_vector(15 downto 0);
+            o_ram_wr_en : out std_logic;
             i_data_alu, i_data_ram : in std_logic_vector(15 downto 0);
             i_resReady, i_eqzero, i_reset, i_clk : std_logic
     );
@@ -14,8 +15,7 @@ end inst_dec;
 architecture rtl of inst_dec is
     signal r_ramCnt : unsigned (2 downto 0);
     signal r_pc : unsigned (15 downto 0);
-    signal r_data_ram_i : std_logic_vector(15 downto 0);--Registers for word-wise ram reading and writing
-    signal r_data_ram_o : std_logic_vector(15 downto 0);
+    signal r_data_ram_i, r_data_ram_o : std_logic_vector(15 downto 0);--Registers for word-wise ram reading and writing
     signal pc_en, ramCnt_en, pc_res, ramCnt_res, pc_load: std_logic;
 
     type stateType is (base, mulDiv, jZ, pushRAM, loadRAM);
@@ -69,24 +69,11 @@ begin
                     x"0" when currState = loadRam and r_ramCnt /=4 else
                     x"1" when currState = loadRam and r_ramCnt = 4 else
                     i_data_ram;
-    
---    fsm_combinatorics : process( i_data_ram, i_clk, i_eqzero )
---    begin
---        if(currState = base and i_data_ram = x"D" and i_eqzero = '1') then
---            o_inst <= x"0";
---            nextState <= jz;
---        elsif currState = jz and r_ramCnt /= 4 then
---            o_inst <= x"0"; 
---            ramCnt_en <= '1';
---            r_data_ram_i (4*(r_ramCnt + 1) downto 4*r_ramCnt) <= i_data_ram;
---            nextState <= jz;
---        elsif currState = jz and r_ramCnt = 4 then
---            ramCnt_en <= '0';
---            ramCnt_res <= '1';
---            r_pc <= unsigned(r_data_ram_i);
---            nextState <= base;
---        end if;
---    end process ; -- fsm
+    o_addr_ram <=   r_data_ram_i when r_ramCnt = 4 else r_pc; 
+    o_ram_wr_en <=  '1' when currState = pushRam and r_ramCnt = 4 else '0';
+    o_data_ram <=   i_data_alu;
+    o_data_alu <=   i_data_ram;
+                    
 
     fsm_transitions : process( i_clk )
     begin
