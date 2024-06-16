@@ -21,8 +21,10 @@ end single_ram;
 architecture rtl of single_ram is
 
 -- Shared memory
-type Tmem is array ((2**ADDR_BITWIDTH) - 1 downto 0) of std_logic_vector(DATA_BITWIDTH - 1 downto 0);
-shared variable mem : Tmem;
+type Tmem is array (0 to (2**ADDR_BITWIDTH) - 1) of std_logic_vector(4 - 1 downto 0);
+shared variable mem : Tmem := (x"2", x"F", x"0", x"0", x"0", x"5", x"1", x"F",  x"0", x"0", x"0", x"5", x"1", x"6", x"4", x"d", others=>(others=>'0'));
+--TODO reset declaration to use generics when 
+--initial values are not needed anymore
 	
 begin
 	process(clock_i)
